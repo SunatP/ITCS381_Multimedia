@@ -16,3 +16,4 @@
  1. Architecture Review and Introduction to OS (Week 1)
     * [Lecture 1](https://github.com/SunatP/ITCS381_Multimedia/tree/master/Week1)
  2. Processes and Threads (Week 2 - 6)
+    * [Lecture 2](https://github.com/SunatP/ITCS381_Multimedia/tree/master/Week2)
