@@ -16,5 +16,8 @@ to 255)A 640 x 480 grayscale image requires over 300 KB of storage
   - ## Color in per Channels
     ![3](https://slideplayer.com/slide/9806828/32/images/43/Comparison+RGB+CMY+CMYK+YIQ+HSV+HSL.jpg)
 ## Objectives (Monochrome)
- - ![mono](https://github.com/SunatP/ITCS381_Multimedia/tree/master/img/monochrome.jpg)
- - ![color](https://github.com/SunatP/ITCS381_Multimedia/tree/master/img/color.jpg)
+  ![mono](https://raw.githubusercontent.com/SunatP/ITCS381_Multimedia/master/img/monochrome.jpg)
+## Objectives (Color)  
+  ![color](https://raw.githubusercontent.com/SunatP/ITCS381_Multimedia/master/img/color.jpg)
+## Creating a negative of a grayscale image
+  ![neg](https://raw.githubusercontent.com/SunatP/ITCS381_Multimedia/master/img/negative.jpg)
