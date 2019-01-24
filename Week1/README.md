@@ -1,4 +1,4 @@
-# Week 1
+# Week 1 Digitization and Bitmap Image
 ---
 ## Digital Image 
  * A camera raw image file contains minimally processed data from the image sensor of either a digital camera, or motion picture film scanner, or other image scanner.

@@ -1,4 +1,4 @@
-# Week 2
+# Week 2 Pixel Point and Neighborhood Operations
 
 ## Representation of Monochrome Image in programming
   - ## Grey Channel
