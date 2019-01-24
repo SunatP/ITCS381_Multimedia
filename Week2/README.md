@@ -27,12 +27,11 @@ to 255)A 640 x 480 grayscale image requires over 300 KB of storage
   ![howtong](https://upload.wikimedia.org/wikipedia/commons/b/b3/Photographic_processing.jpg)
 
 ## Bitwise operation Black and White Image
+## 1. BITWISE by using image
 ![bitwise](http://wiki.lofarolabs.com/images/0/09/Bitwise.jpg)
-***
- 
+ ## 2. BITWISE by using image (Cont.)
  ![bitwisecont](http://2.bp.blogspot.com/-8VMKL0rc9lI/UsuRPuajCqI/AAAAAAAABUc/tXJmVxi_g3Y/s1600/bitwiseOperators.JPG)
-***
- 
+ ## 3. Bitwise operation with img Threshold
  ![bitwise2](https://raw.githubusercontent.com/SunatP/ITCS381_Multimedia/master/img/bitwise.jpg)
 
 ## Pixel vs Neighborhood Processing
@@ -40,7 +39,7 @@ to 255)A 640 x 480 grayscale image requires over 300 KB of storage
   - ## Neighborhood Processing 
   ![neighborhoodprocess](http://what-when-how.com/wp-content/uploads/2012/07/tmp26dc134_thumb.png)
  
-  What is it? A sliding neighborhood operation is an operation that is performed a pixel at a time, with the value of any given pixel in the output image being determined by applying some algorithm to the values of the corresponding input pixel's neighborhood. A pixel's neighborhood is some set of pixels, defined by their locations relative to that pixel, which is called the center pixel. The neighborhood is a rectangular block, and as you move from one element to the next in an image matrix, the neighborhood block slides in the same direction. 
+  **What is it ?** A sliding neighborhood operation is an operation that is performed a pixel at a time, with the value of any given pixel in the output image being determined by applying some algorithm to the values of the corresponding input pixel's neighborhood. A pixel's neighborhood is some set of pixels, defined by their locations relative to that pixel, which is called the center pixel. The neighborhood is a rectangular block, and as you move from one element to the next in an image matrix, the neighborhood block slides in the same direction. 
   
   The following figure shows the neighborhood blocks for some of the elements in a 6-by-5 matrix with 2-by-3 sliding blocks. The center pixel for each neighborhood is marked with a dot.
    
