@@ -31,3 +31,27 @@
    * DPI คือการตั้งค่าการพิมพ์ที่สามารถทำได้บนเครื่องพิมพ์
 
    * PPI คือการตั้งค่าของภาพที่สามารถทำได้ในโปรแกรมสำหรับการพิมพ์
+
+## Calculate Image Size
+  - **Example** Want to print 8 * 10 inch picture at 300 dpi 
+    - calculate total pixel
+      1. (width * dpi) * (height * dpi) = (8 * 300) * (10* 300) = 2400 * 3000 pixel
+
+## Compatible file type
+
+| Image Type       | Byte per pixel           | Possible color combination  |Compatible File Type|
+| ------------- |:-------------:| -----:|-----:|
+| 1 bit Line art      | 1/8 byte per pixel | 2 colors, 1 bit per pixel. One ink or white paper |TIF, PNG, GIF |
+| 8-bit Indexed Color      | Up to 1 byte per pixel if 256 colors| 256 colors maximum.For graphics use today |TIF, PNG, GIF |
+| 8-bit Grayscale | 1 byte per pixel      |	256 shades of gray|JPG, TIF, PNG |
+| 16 bit Grayscale      | 2 bytes per pixel |65636 shades of gray |TIF, PNG|
+| 24 bit RGB(8-bit mode)     | 3 bytes per pixel (one byte each for R, G, B) | Computes 16.77 million colors max. 24 bits is the "Norm" for photo images, e.g., JPG |JPG, TIF, PNG |
+| 32 bit CMYK | 4 bytes per pixel, for Prepress     |Cyan, Magneta, Yellow and Black ink, typically in halftones|TIF|
+| 48-bit RGB(16-bit mode) | 6 bytes per pixel      | 2.81 trillion colors max. Except we don't have 16-bit display devices |TIF,PNG|
+
+## **Note**
+   * **JPG** files are limited to only 24 bit RGB color or 8-bit grayscale. JPG is radically different than most, using a lossy compression which at extremes can be very small but also detrimental to image quality if we overdo it. A larger file with a better JPG Quality setting is the best photo image. Surely the most popular image file, most digital camera images and web page images are JPG. Many one hour photo printing shops only accept JPG files. Just do not overdo the size reduction. The largest high quality JPG image is still a rather small file, compared to others. 
+   * **GIF** files were designed by CompuServe for early 8-bit video monitors when small file size was important for speed of dial up modems, all before 24 bit color or JPG was popular (and now 24 bit color is very superior for photo images). Since the image resolution number (dpi) is Not used by video monitors, it is not stored in GIF files, therefore making GIF less suitable for printing purposes. GIF is at most one byte per pixel, and is intended for indexed color, such as graphics, but 8-bit grayscale will also fit. GIF uses lossless compression. 
+   * **PNG** files are versatile (multi-purpose). Two main modes: 8-bit PNG mode is intended for indexed color, comparable uses as GIF files (but with additions). Otherwise PNG can be 24 bit or 48-bit RGB color, or 8 or 16 bit grayscale, comparable to TIF for those. PNG uses lossless compression, often a bit smaller file than GIF or TIF LZW, but can be slightly slower to open and decompress.
+   * **TIF** files are the most versatile in a few ways (image types RGB, CMYK prepress, YCbCr, Halftones, CIE L*a*b*), and surely we could say popular with the more serious users (but not compatible in web browsers). Generally used for lossless data, both photo and for scanned text document archival. LZW compression is used for photos, and documents usually use ITU G3 or G4 compression (including fax is TIFF format). Technically TIF allows designers to invent any new format in TIF format, but of course, then it is only compatible for their intended use with their software. 
+   * **Raw** files are 12 or 14 bits per pixel (less than 2 bytes per pixel), and are often also compressed. Raw images are not directly viewable (our monitors show RGB). We see a RGB conversion while processing raw (typically correcting white balance and maybe exposure), and then a RGB file is output, often a JPG file. If additional edit is needed later, we discard that JPG file as expendable, and use the raw process to add any additional edit, and output a good replacement JPG file. 
