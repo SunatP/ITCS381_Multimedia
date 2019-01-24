@@ -51,7 +51,7 @@ The center pixel is the actual pixel in the input image being processed by the o
 
 For any m-by-n neighborhood, the center pixel is
 ```
-  floor((["m n"]+1)/2) 
+  floor(([m n]+1)/2) 
 ```   
 
 In the 2-by-3 block shown in Example, the center pixel is (1,2), or, the pixel in the second column of the top row of the neighborhood.
