@@ -31,7 +31,7 @@ to 255)A 640 x 480 grayscale image requires over 300 KB of storage
 ![bitwise](http://wiki.lofarolabs.com/images/0/09/Bitwise.jpg)
  ## 2. BITWISE by using image (Cont.)
  ![bitwisecont](http://2.bp.blogspot.com/-8VMKL0rc9lI/UsuRPuajCqI/AAAAAAAABUc/tXJmVxi_g3Y/s1600/bitwiseOperators.JPG)
- ## 3. Bitwise operation with img Threshold
+ ## 3. Bitwise operation with image Threshold
  ![bitwise2](https://raw.githubusercontent.com/SunatP/ITCS381_Multimedia/master/img/bitwise.jpg)
 
 ## Pixel vs Neighborhood Processing
