@@ -13,7 +13,7 @@
 - Practical Skills 30%
 ----
 ### Update Class 
- 1. Architecture Review and Introduction to OS (Week 1)
+ 1. Digitization and Bitmap Image (Week 1)
     * [Lecture 1](https://github.com/SunatP/ITCS381_Multimedia/tree/master/Week1)
- 2. Processes and Threads (Week 2 - 6)
+ 2. Pixel Point and Neighborhood Operations (Week 2)
     * [Lecture 2](https://github.com/SunatP/ITCS381_Multimedia/tree/master/Week2)
