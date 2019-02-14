@@ -103,13 +103,56 @@ retval, mask = cv2.threshold(fgGrayscale, 200, 255, cv2.THRESH_BINARY)
 fig = display_image_actual_size_double(fgGrayscale, mask)
 fig.savefig("Lab3Ex2.jpg",bbox_inches='tight')
 ```
+
 ## Output should be like this
 
 ![output](https://raw.githubusercontent.com/SunatP/ITCS381_Multimedia/master/Lab3/Lab3Ex2.jpg)
 
+## แล้วอะไรคือ **cv2.threshold**
+ในตัวอย่างคือโค้ด ของ Python, **Threshold** ก็คือเกณฑ์ที่ใช้แบ่งสิ่งใดสิ่งหนึ่ง เช่น
+มีรถอยู่ 5 คัน ขับด้วยความเร็ว ดังนี้ 60, 156, 120, 80 และ 180 กม.ต่อชม. แล้วเราก็เถียงกับเพื่อนว่า คันไหนขับเร็ว คันไหนขับช้า เราเลยต้องมีเกณฑ์มาแบ่ง
+สมมติเราให้ รถที่ขับเร็วกว่า 90 กม.ต่อชม. เป็นรถที่ขับเร็ว เราเรียกค่านี้ว่า **Threshold Value**
+<br>
+
+**Threshold Value** คือ การนำภาพ 1 Channel (หรือ **Grayscale Image**) มาแปลงค่า intesity ของแต่ละ Pixel ให้เหลือเพียง 2 ค่า คือ 0(ดำ) กับ 255(ขาว) เราเรียกภาพที่มีค่า intensity เพียง 2 ค่า ว่า **"Binary Image"** โดยเราจะใช้ Threshold Value ในการแบ่งว่า Pixel ที่มี intensity XX ควรมีค่าเท่าไหร่ ดังนี้
+
+   - pixel ที่มีค่า มากกว่าเท่ากับ Threshold Value มีค่าเท่ากับ 255 หรือสีขาว
+
+    - pixel ที่มีค่า น้อยกว่า Threshold Value มีค่าเท่ากับ 0 หรือสีดำนั้นเอง
+
+**Pixel** ที่เป็นสีดำจะมีค่าเป็น **0** ส่วนสีขาวจะมีค่าเป็น **255** ซึ่งเพิ่งเท่านี้เรายังไม่สามารถลบ พื้นหลัง ออกได้เดี๋ยวคราวหน้าจะมาสอนสร้าง mask ไว้คุมตัวโคนันแล้วลบพื้นหลังทิ้ง 
+
+```python
+cv2.threshold(Grayscale_img, threshold_value, max_value, style)
+
+cv2.threshold(img,thres,255,cv2.THRESH_BINARY)
+
+```
+
+|คำศัพท์|ความหมาย|
+|--|--|
+|Grayscale_img | ภาพขาวดำ ที่จริงมันก็คือ ภาพที่มี 1 Channel เราอาจจะไม่ต้องแปลงเป็น Grayscale แต่เอา Channel R, G หรือ B มาใช้เลยก็ได้ด้วยการใช้ Function cv2.split() |
+|threshold_value|Threshold value|
+|max_value| 	ค่าสีที่ใช้แสดง เมื่อ Pixel นั้นมีค่ามากกว่า th_value เช่น ถ้าเราลดจาก 255 เป็น 200 ภาพผลลัพธ์ที่ได้จากสีขาวก็จะกลายเป็นสีออกเทาๆ|
+|style|ลักษณะผลลัพธ์ แบบที่เราใช้ก็เป็นแบบธรรมดา ถ้าเติม _INV ไปก็จะ invert สีผลลัพธ์ให้ตรงกันข้าม |
+
+**Style** มีทั้งหมด 5 แบบ ดังตัวอย่าง
+```python
+cv2.THRESHOLD_BINARY
+
+cv2.THRESHOLD_BINARY_INV 
+
+cv2.THRESHOLD_TRUNC
+
+cv2.THRESHOLD_TOZERO
+
+cv2.THRESHOLD_TOZERO_INV
+```
+
 ## Mask the foreground and the roi, then combine them
 
 The next steps involves applying one or more bitwise operations, making use of the binary mask we have just created. We give you the expected output; it is your task to figure out the process. Below is an OpenCV command for 'and' operation. The syntax of other bitwise operations are the same (consult OpenCV library to learn more).
+
 
 ```python 
 mask_inv = cv2.bitwise_not(mask)
@@ -121,6 +164,17 @@ fig.savefig("Lab3Ex3.jpg",bbox_inches='tight')
 
 ![output](https://raw.githubusercontent.com/SunatP/ITCS381_Multimedia/master/Lab3/Lab3Ex3.jpg)
 
+## อะไรคือ **cv2.bitwise_not cv2.bitwise_and**
+```python
+result = cv2.bitwise_and(fg, fg, mask = mask_inv)
+```
+**bitwise_and** คือการนำภาพระดับบิตที่ชื่อว่า fg มาทำการ AND กับ Mask ที่ชื่อว่า mask_inv โดยมีหลักการว่า 0 AND กับอะไรก็จะได้ 0
+```python
+inv=cv2.bitwise_not(mask)
+```
+**bitwise_not** คือการการสลับภาพ mask จาก 0 เป็น 1 จาก 1 เป็น 0 หรือ การสลับจากภาพขาวเป็นดำ จากดำเป็นขาว
+
+<br>
 
 **Exercise #4** : Mask the roi (deleting pixels that will be replaced by the logo). Display both the mask and the result.
 
