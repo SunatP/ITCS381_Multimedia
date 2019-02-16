@@ -39,7 +39,7 @@ install:
 
 script:
   - cd Lab1
-  - coverage run --source=Lab1.ipynb, manage.py test
+  - coverage run --source=Lab1.ipynb test
   
   after_success:
   - coverage report
