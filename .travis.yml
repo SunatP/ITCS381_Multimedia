@@ -1,43 +1,17 @@
 language: python
-sudo: false
-
 python:
-  - "3.5"
-  
-branches:
-  only:
-     - master
+     - "2.7.12"
+     - "3.5"
+     - "3.5"
+     - "nightly"
 
-before_install:
-  - pip install pytest-cov
-  - export DJANGO_SETTINGS_MODULE=itcs381.settings
-  - export SECRET_KEY='ziVoNv7j9xnTbMfBrwuwxw'
-  - export DEBUG=True
-  
-install:
-  - sudo apt-get update
-  # We do this conditionally because it saves us some downloading if the
-  # version is the same.
-  - if [[ "$TRAVIS_PYTHON_VERSION" == "2.7" ]]; then
-      wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
-    else
-      wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh;
-    fi
-  - bash miniconda.sh -b -p $HOME/miniconda
-  - export PATH="$HOME/miniconda/bin:$PATH"
-  - hash -r
-  - conda config --set always_yes yes --set changeps1 no
-  - conda update -q conda
-  # Useful for debugging any issues with conda
-  - conda info -a
-  - pip install coverage
-  - pip install coveralls
-  - pip install -r requirements.txt
+install: 
+    - pip install -r requirements.txt
+    - sudo apt-get install pandoc
 
 script:
-  - cd Lab1
-  - coverage run --source=Lab1.ipynb test
-  
-  after_success:
-  - coverage report
-  - coveralls
+    - py.test tests/
+    - travis-sphinx --source ./docs build
+
+after_success:
+    - travis-sphinx --branches=master,Develop deploy
