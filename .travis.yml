@@ -8,6 +8,11 @@ python:
   - "3.7-dev"  # 3.7 development branch
   - "3.7"
   - "3.7.0"    # 3.7.0 
+
+before_install:
+  - sudo apt-get -qq update
+  - sudo apt-get install -y python-numpy 
+  
 # command to install dependencies
 install:
   - pip install .
