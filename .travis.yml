@@ -33,8 +33,6 @@ install:
   - conda update -q conda
   # Useful for debugging any issues with conda
   - conda info -a
-
-  - conda env create -n test-environment python=$TRAVIS_PYTHON_VERSION -f environment.yml
   - pip install coverage
   - pip install coveralls
   - pip install -r requirements.txt
