@@ -20,3 +20,6 @@ script:
 virtualenv:
   system_site_packages: true  
 
+api_key:
+  secure: ${ziVoNv7j9xnTbMfBrwuwxw}
+
