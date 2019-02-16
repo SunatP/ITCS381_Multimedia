@@ -13,7 +13,7 @@ install:
 script:
     - travis-sphinx build
     - py.test test_nb
-    - travis-sphinx --source./Lab1 
+    - travis-sphinx --source Lab1 , Lab2 
     
 after_success:
-    - travis-sphinx --branches=master,Develop deploy
+    - travis-sphinx --branches=master,Lab1 deploy
