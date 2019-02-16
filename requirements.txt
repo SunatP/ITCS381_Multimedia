@@ -1,0 +1,10 @@
+sphinx-rtd-theme==0.2.4
+Sphinx==1.6.7
+travis-sphinx==1.4.3
+flask==0.12.3
+jupyter
+nbconvert
+pandoc
+nbsphinx
+IPython
+ipykernel
