@@ -1,5 +1,5 @@
 # ITCS381 Introduction to Multimedia Systems
-
+[![Build Status](https://travis-ci.org/SunatP/ITCS381_Multimedia.svg?branch=master)](https://travis-ci.org/SunatP/ITCS381_Multimedia)
 # Grading Policy
 * Week 1 - 5   30% -|
 * Week 6 - 10  20% -> 65%  
