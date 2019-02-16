@@ -3,7 +3,6 @@ python:
   - "3.5"
 before_install:
   - pip install pytest-cov
-  - cd python
 install:
   - sudo apt-get update
   # We do this conditionally because it saves us some downloading if the
