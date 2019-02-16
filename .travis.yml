@@ -1,8 +1,22 @@
 language: python
+sudo: false
+
 python:
   - "3.5"
+  
+env:
+  - DJANGO=1.10.5
+
+branches:
+  only:
+     - master
+
 before_install:
   - pip install pytest-cov
+  - export DJANGO_SETTINGS_MODULE=frisor.settings
+  - export SECRET_KEY='This is secret'
+  - export DEBUG=True
+  
 install:
   - sudo apt-get update
   # We do this conditionally because it saves us some downloading if the
@@ -23,3 +37,10 @@ install:
   - conda env create -n test-environment python=$TRAVIS_PYTHON_VERSION -f environment.yml
   - source activate test-environment
 
+script:
+  - cd Lab1
+  - coverage run --source=Lab1.ipynb, manage.py test
+  
+  after_success:
+  - coverage report
+  - coveralls
