@@ -16,6 +16,8 @@ before_install:
 # command to install dependencies
 install:
   - pip install .
+  - pip install -q Django==$DJANGO_VERSION
+  - pip install -r requirements.txt
 # command to run tests
 script:
  - pytest
