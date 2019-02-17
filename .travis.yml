@@ -14,6 +14,10 @@ script:
 #   - py.test test_nb.py
     - pytest test_nb.py
 #     - travis-sphinx --source=docs/source
+  # Download v3.0.0 .zip file and extract.
+     - curl -sL https://github.com/Itseez/opencv/archive/3.0.0-beta.zip > opencv.zip
+     - unzip opencv.zip
+     - cd opencv-3.0.0-beta
     
 after_success:
     - travis-sphinx --branches=master,./Lab1 deploy
