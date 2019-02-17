@@ -11,4 +11,4 @@ def _exec_notebook(path):
 
 
 def test():
-_exec_notebook('./Lab1/Lab1.ipynb')
+_exec_notebook("./Lab1/Lab1.ipynb")
