@@ -12,7 +12,7 @@ install:
 
 script:
     - travis-sphinx build
-    - py.test test_nb
+    - py.test test_nb.py
     - travis-sphinx --source=docs/source
     
 after_success:
