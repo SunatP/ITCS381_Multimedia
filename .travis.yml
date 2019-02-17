@@ -20,7 +20,7 @@ script:
 #    - travis-sphinx build
 #   - py.test test_nb.py
 #    - python test_nb.py
-#     - travis-sphinx --source=docs/source
+     - travis-sphinx build
   # Download v3.0.0 .zip file and extract.
      - curl -sL https://github.com/Itseez/opencv/archive/3.0.0-beta.zip > opencv.zip
      - unzip opencv.zip
