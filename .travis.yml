@@ -19,6 +19,8 @@ script:
      - curl -sL https://github.com/Itseez/opencv/archive/3.0.0-beta.zip > opencv.zip
      - unzip opencv.zip
      - cd opencv-3.0.0-beta
+     - sudo apt-get update
+     - sudo apt-get install libopencv-dev python-opencv
     
 after_success:
     - travis-sphinx --branches=master,./Lab1 deploy
