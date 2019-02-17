@@ -14,3 +14,6 @@ im = cv2.imread(r"Lab1/dog.jpg")
 plt.imshow(im, cmap='gray')
 
 _exec_notebook("./Lab1/Lab1.ipynb")
+_exec_notebook("./Lab2/Lab2.ipynb")
+_exec_notebook("./Lab3/Lab3.ipynb")
+_exec_notebook("./Lab4/Lab4.ipynb")
