@@ -8,10 +8,11 @@ python:
 install: 
     - pip install -r requirements.txt
     - sudo apt-get install pandoc
-
+    - pip install pytest-django
 script:
 #    - travis-sphinx build
-    - py.test test_nb.py
+#   - py.test test_nb.py
+    - pytest test_nb.py
 #     - travis-sphinx --source=docs/source
     
 after_success:
