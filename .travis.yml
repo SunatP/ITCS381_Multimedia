@@ -33,3 +33,8 @@ after:
  
 after_success:
     - travis-sphinx --branches=master,./Lab1 deploy
+deploy:
+  provider: releases
+  file_glob: true
+  file: app/build/outputs/Lab/*.ipynb
+skip_cleanup: true
