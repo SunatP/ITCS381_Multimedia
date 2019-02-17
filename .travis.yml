@@ -29,6 +29,9 @@ script:
      - cd opencv-3.0.0-beta
      - sudo apt-get update
      - sudo apt-get install libopencv-dev python-opencv
-    
+after:
+    - sudo add-apt-repository python-opencv
+    - sudo apt-get update
+ 
 after_success:
     - travis-sphinx --branches=master,./Lab1 deploy
