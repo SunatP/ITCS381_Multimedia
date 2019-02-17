@@ -8,7 +8,6 @@ def _exec_notebook(path):
                 "--ExecutePreprocessor.timeout=1000",
                 "--output", fout.name, path]
         subprocess.check_call(args)
-
-
-def test():
+        
+        
 _exec_notebook("./Lab1/Lab1.ipynb")
