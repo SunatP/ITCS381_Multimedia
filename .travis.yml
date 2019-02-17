@@ -1,10 +1,8 @@
 language: python
 python:
-     - 2.7
      - "2.7"
      - "3.5"
      - "3.6"
-     - "3.7"
      - "nightly"
      
 before_install:
@@ -21,7 +19,7 @@ install:
 script:
 #    - travis-sphinx build
 #   - py.test test_nb.py
-    - python test_nb.py
+#    - python test_nb.py
 #     - travis-sphinx --source=docs/source
   # Download v3.0.0 .zip file and extract.
      - curl -sL https://github.com/Itseez/opencv/archive/3.0.0-beta.zip > opencv.zip
