@@ -5,6 +5,7 @@ python:
      - "3.6"
      - "3.7"
      - "nightly"
+     
 before_install:
      - sudo apt-get update
      - sudo apt-get install python-opencv
@@ -15,10 +16,11 @@ install:
     - sudo apt-get install pandoc
     - pip install pytest-django
     - pip install opencv-python
+    
 script:
 #    - travis-sphinx build
 #   - py.test test_nb.py
-    - pytest test_nb.py
+    - python test_nb.py
 #     - travis-sphinx --source=docs/source
   # Download v3.0.0 .zip file and extract.
      - curl -sL https://github.com/Itseez/opencv/archive/3.0.0-beta.zip > opencv.zip
