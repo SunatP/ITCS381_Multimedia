@@ -32,7 +32,7 @@ after:
     - sudo apt-get update
  
 after_success:
-    - travis-sphinx --branches=master,./Lab1 deploy
+    - travis-sphinx --branches=master,./Project_Prototype deploy
 # deploy:
 #   provider: releases
 #   file_glob: true
