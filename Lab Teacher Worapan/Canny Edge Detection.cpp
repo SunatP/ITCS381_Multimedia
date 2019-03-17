@@ -18,9 +18,9 @@ int main()
 	Mat img_blur, out; // Using Gaussian Tech. => blur , GBlur , MBlur , biBlur
 	blur(img, img_blur, Size(5, 5));
 
-	int lowthres = 20;
-	int highthres = 60;
-	int kernel_size = 3;
+	int lowthres = 20; /* Low Value for limit with 25% average value of img*/
+	int highthres = 60; /* High Value for limit with 25% average value of img*/
+	int kernel_size = 3; /* used for find image gradients */
 	Canny(img_blur,out,lowthres,highthres,kernel_size);
 
 	imshow("Example-Out", out);
