@@ -26,7 +26,7 @@ int main()
 
 	imshow("Example", img);
 	waitKey();
-	
+
 }
 
 void mouse_callback(int event, int x, int y, int flag, void *param)
@@ -40,7 +40,7 @@ void mouse_callback(int event, int x, int y, int flag, void *param)
 		Mat img;
 		img = imread("dog.jpg", 1);
 		Vec3b color = img.at<Vec3b>(cv::Point(x, y));
-		
+
 		cout << "Left button of the mouse is clicked - position ( X:" << x << ", Y: " << y << ")" << endl;
 		printf("Blue: %d, Green: %d, Red: %d \n", color[0], color[1], color[2]);
 	}
