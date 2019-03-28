@@ -84,7 +84,7 @@ int main()
 {
 cv:setBreakOnError(true);
 	//mouse();
-	sobel();
+	//sobel();
 	//lab13();
 	//magnitude();
 	//Lab14();
